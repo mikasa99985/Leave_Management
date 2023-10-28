@@ -6,41 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="mystyle.css"> -->
     <title>Sign Up</title>
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .formcustom {
-            max-width: 400px;
-            margin: auto;
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .formcustom h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .formcustom .form-floating {
-            margin-bottom: 15px;
-        }
-        .formcustom .form-check {
-            margin-bottom: 20px;
-        }
-        .formcustom .btn-primary {
-            background-color: #007bff;
-            border: none;
-            transition: background-color 0.3s;
-        }
-        .formcustom .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .formcustom .btn-primary:focus {
-            box-shadow: none;
-        }
-    </style>
+ 
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

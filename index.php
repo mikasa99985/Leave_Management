@@ -21,16 +21,8 @@ echo "hello world!";
 <header>
         <h1>Welcome to Our Website</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="signin.php">Sign In</a></li>
-            <li><a href="signup.php">Sign Up</a></li>
-        </ul>
-    </nav>
+    
+    <?php include 'header.php' ?>
     
     <main>
         <section>
@@ -47,9 +39,8 @@ echo "hello world!";
         </section>
         
         </main>
-        <footer>
-        <p>&copy; 2023 Our Website. All rights reserved.</p>
-    </footer>
+        <?php include 'footer.php' ?>
+     
 </body>
 </html>
 
