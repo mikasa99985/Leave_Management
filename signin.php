@@ -1,3 +1,64 @@
+<?php
+    require "_dbcon.php";
+    session_start();
+
+    // if (isset($_POST['sign_up'])) {
+    //   // echo '<pre>';
+    //   // print_r($_POST);
+    //   // echo '</pre>';
+    //   $user = $_POST['user'];
+    //   $password = $_POST['password'];
+
+    //   $result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user` = '$user'");
+    //   $numExistRow = mysqli_num_rows($result);
+    //   if (!($numExistRow > 0)) {
+    //     $hash = password_hash($password, PASSWORD_DEFAULT);
+    //     $sql = "INSERT INTO `users` (`id`, `user`, `password`, `type`, `date`) VALUES (NULL, '$user', '$hash', 'employee', current_timestamp())";
+        
+    //     if (mysqli_query($conn, $sql)) {
+    //       echo 'User Create Successful!';
+    //     }
+        
+    //     else{
+    //       echo 'Network Error!'; 
+
+    //     }
+    //   }else{
+    //     echo 'User already exists!';
+    //   }
+      
+
+    // }
+
+?>
+
+<?php
+  
+
+    if (isset($_POST['sign_up'])) {
+
+        $user = $_POST['user'];
+        $password = $_POST['password'];
+
+        $User_result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user` = '$user'");
+        $num_rows = mysqli_num_rows($User_result);
+        if ($num_rows == 1) {
+          while ($get_data_row = mysqli_fetch_assoc($User_result)) {
+            if (password_verify($password, $get_data_row['password'])) {
+              $_SESSION['loggedin'] = true;
+              $_SESSION['user'] = $get_data_row;
+              echo "Successfully Signed in";
+            }else{
+              echo "Invalid Password";
+            }
+          }
+        }else{
+          echo "Invalid User";
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +70,19 @@
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<main class="form-signin w-100 m-auto">
+<main class="form-signin w-100 m-auto formcustom">
 
-
-  <form>
+  <form method="post" class="my-5">
     
-    <div class="p-3 mb-2 bg-info text-dark formcustom">.bg-info
+    <div class="p-3 mb-2 bg-info text-dark">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
       
           <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="text" class="form-control" name="user" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Password</label>
           </div>
       
@@ -32,7 +92,7 @@
               Remember me
             </label>
           </div>
-          <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+          <button class="btn btn-primary w-100 py-2" name="sign_up" value='1' type="submit">Sign In</button>
           <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
         </div>
         </form>
@@ -40,3 +100,5 @@
       </main>
 </body>
 </html>
+
+<!-- INSERT INTO `users` (`id`, `user`, `password`, `type`, `date`) VALUES (NULL, 'test', 'test', 'user', current_timestamp()); -->

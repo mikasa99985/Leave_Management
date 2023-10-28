@@ -1,4 +1,5 @@
 <?php require_once "_dbcon.php"?>
+<?php session_start(); ?>
 
 <?php
 echo "hello world!";
@@ -26,6 +27,8 @@ echo "hello world!";
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact Us</a></li>
+            <li><a href="signin.php">Sign In</a></li>
+            <li><a href="signup.php">Sign Up</a></li>
         </ul>
     </nav>
     
@@ -49,3 +52,11 @@ echo "hello world!";
     </footer>
 </body>
 </html>
+
+<?php
+
+    echo '<pre>';
+    print_r($_SESSION);
+    echo '</pre>';
+        
+?>
