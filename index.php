@@ -1,3 +1,4 @@
+<link href="index.css" rel="stylesheet">
 <?php require_once "_dbcon.php"?>
 <?php session_start(); ?>
 
