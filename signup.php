@@ -1,3 +1,37 @@
+<?php
+    require "_dbcon.php";
+    
+    if (isset($_POST['sign_up'])) {
+        // echo '<pre>';
+        // print_r($_POST);
+        // echo '</pre>';
+        $user = $_POST['user'];
+        $password = $_POST['password'];
+  
+        $result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user` = '$user'");
+        $numExistRow = mysqli_num_rows($result);
+        if (!($numExistRow > 0)) {
+          $hash = password_hash($password, PASSWORD_DEFAULT);
+          $sql = "INSERT INTO `users` (`id`, `user`, `password`, `type`, `date`) VALUES (NULL, '$user', '$hash', 'employee', current_timestamp())";
+          
+          if (mysqli_query($conn, $sql)) {
+            echo 'User Create Successful!';
+          }
+          
+          else{
+            echo 'Network Error!'; 
+  
+          }
+        }else{
+          echo 'User already exists!';
+        }
+        
+  
+      }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +49,7 @@
             <div class="p-3 mb-2 bg-info text-dark formcustom">
                 <h1 class="h3 mb-3 fw-normal">Create an Account</h1>
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingName" placeholder="Your Name">
+                    <input type="text" class="form-control"  id="floatingName" placeholder="Your Name">
                     <label for="floatingName">Your Name</label>
                 </div>
                 <div class="form-floating">

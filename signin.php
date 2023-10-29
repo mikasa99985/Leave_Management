@@ -1,35 +1,6 @@
 <?php
     require "_dbcon.php";
     session_start();
-
-    // if (isset($_POST['sign_up'])) {
-    //   // echo '<pre>';
-    //   // print_r($_POST);
-    //   // echo '</pre>';
-    //   $user = $_POST['user'];
-    //   $password = $_POST['password'];
-
-    //   $result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user` = '$user'");
-    //   $numExistRow = mysqli_num_rows($result);
-    //   if (!($numExistRow > 0)) {
-    //     $hash = password_hash($password, PASSWORD_DEFAULT);
-    //     $sql = "INSERT INTO `users` (`id`, `user`, `password`, `type`, `date`) VALUES (NULL, '$user', '$hash', 'employee', current_timestamp())";
-        
-    //     if (mysqli_query($conn, $sql)) {
-    //       echo 'User Create Successful!';
-    //     }
-        
-    //     else{
-    //       echo 'Network Error!'; 
-
-    //     }
-    //   }else{
-    //     echo 'User already exists!';
-    //   }
-      
-
-    // }
-
 ?>
 
 <?php
