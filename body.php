@@ -9,7 +9,7 @@
 
 <body>
     <main>
-    <!-- <div class="container"> -->
+    <div class="container">
         <div class="form-floating">
             <input type="text" class="form-control" name="user" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Enter your Name</label>
@@ -28,7 +28,7 @@
             <input type="address" class="form-control" name="address" id="floatingaddress" placeholder="address">
             <label for="floatingaddress"> Enter your Address</label>
         </div>
-<!-- </div> -->
+</div>
 
         <section>
 
