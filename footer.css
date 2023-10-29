@@ -1,0 +1,17 @@
+.custom-footer {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.custom-footer h5 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.custom-footer p {
+    font-size: 12px;
+}
+
+.main-content {
+    margin-bottom: 100px; /* Adjust this value to move the footer further down */
+}
