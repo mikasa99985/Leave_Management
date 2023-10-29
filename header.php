@@ -53,6 +53,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="signup.php">Sign Up</a>
                 </li>
+                
             </ul>
         </div>
     </nav>

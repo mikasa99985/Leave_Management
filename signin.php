@@ -6,7 +6,7 @@
 <?php
   
 
-    if (isset($_POST['sign_up'])) {
+    if (isset($_POST['sign_in'])) {
 
         $user = $_POST['user'];
         $password = $_POST['password'];
@@ -63,7 +63,7 @@
               Remember me
             </label>
           </div>
-          <button class="btn btn-primary w-100 py-2" name="sign_up" value='1' type="submit">Sign In</button>
+          <button class="btn btn-primary w-100 py-2" name="sign_in" value='1' type="submit">Sign In</button>
           <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
         </div>
         </form>
