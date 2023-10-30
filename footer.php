@@ -11,35 +11,36 @@
 </head>
 <body>
 
-    <footer class="bg-dark text-white text-center custom-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Email: info@example.com</p>
-                    <p>Phone: 123-456-7890</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Follow Us</h5>
-                    <a href="#" class="text-white">Facebook</a><br>
-                    <a href="#" class="text-white">Twitter</a><br>
-                    <a href="#" class="text-white">Instagram</a>
-                </div>
-                <div class="col-md-4">
-                    <h5>Subscribe</h5>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Enter your email">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-sm">Subscribe</button>
-                    </form>
-                </div>
+<footer class="bg-dark text-white text-center custom-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-left"> <!-- Added class 'text-left' -->
+                <h5>Contact Us</h5>
+                <p>Email: info@example.com</p>
+                <p>Phone: 123-456-7890</p>
+            </div>
+            <div class="col-md-4"> <!-- No changes -->
+                <h5>Follow Us</h5>
+                <a href="#" class="text-white">Facebook</a><br>
+                <a href="#" class="text-white">Twitter</a><br>
+                <a href="#" class="text-white">Instagram</a>
+            </div>
+            <div class="col-md-4 text-right"> <!-- Added class 'text-right' -->
+                <h5>Subscribe</h5>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-sm">Subscribe</button>
+                </form>
             </div>
         </div>
-        <div class="container mt-2">
-            <p class="mb-0">&copy; 2023 Your Company</p>
-        </div>
-    </footer>
+    </div>
+    <div class="container mt-2">
+        <p class="mb-0">&copy; 2023 Your Company</p>
+    </div>
+</footer>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
