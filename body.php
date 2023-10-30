@@ -1,3 +1,35 @@
+<?php
+require "_dbcon.php";
+// session_start();
+?>
+
+<?php
+
+
+if (isset($_POST['sumbitinfo'])) {
+
+  $user = $_POST['user'];
+  $contact = $_POST['contact'] ;
+  $email = $_POST['email'];
+  $address = $_POST['address'];
+  
+  if(mysqli_query($conn, "INSERT INTO `data` (`user`, `contact`, `email`, `address`, `sno`) VALUES ('$user', '$contact', '$email', '$address', NULL);" )) {
+   
+    echo "successful" ;
+    
+  }
+
+  else {
+    echo "invalid input" ;
+  }
+
+  
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +41,7 @@
 
 <body>
     <main>
+      <form method='post' >
     <div class="container">
         <div class="form-floating">
             <input type="text" class="form-control" name="user" id="floatingInput" placeholder="name@example.com">
@@ -27,13 +60,14 @@
         <div class="form-floating">
             <input type="address" class="form-control" name="address" id="floatingaddress" placeholder="address">
             <label for="floatingaddress"> Enter your Address</label>
-        </div>
-</div>
-
+          </div>
+          <button type="submit" name='sumbitinfo' class="btn btn-primary">Submit</button>
+      </div>
+</form>
         <section>
 
             <h2>About Us</h2>
-            <p>Welcome to our website. We are a dedicated team of professionals...</p>
+            <p>This is leave management system</p>
         </section>
         <section>
             <h2>Our Services</h2>
